@@ -190,7 +190,7 @@
 	heapq.heappush(heap, 20)
 	print(heap)
 
-##### heappop 함수는 가장 작은 원소를 힙에서 제거함과 동시에 그를 결괏값으로 리턴한다.
+##### heappop 함수는 가장 작은 원소를 힙에서 제거함과 동시에 그를 결과값으로 리턴한다.
 	result = heapq.heappop(heap)
 	print(result)
 	print(heap)
