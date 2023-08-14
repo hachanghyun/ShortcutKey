@@ -1,5 +1,5 @@
 ### 1. 입력값 처리 (python 기준)
-#### 구분자가 줄바꿈일 경우
+#### (1). 구분자가 줄바꿈일 경우
 	n = int(input())
 	data = []
 	for i in range(n) :
@@ -8,7 +8,7 @@
 	data.sort(reverse = True)
 	print(data)
 
-#### 구분자가 띄어쓰기일 경우
+#### (2). 구분자가 띄어쓰기일 경우
 	m = int(input())
 	
 	data = list(map(int, input().split()))
@@ -16,11 +16,11 @@
 	
 	print(data)
 
-#### 공백을 기준으로 구분하여 적은 수의 데이터 입력
+#### (3). 공백을 기준으로 구분하여 적은 수의 데이터 입력
 	n, m, k = map(int, input().split())
 	print(n,m,k)
 
-#### 이차원 배열 입력 초기화
+#### (4). 이차원 배열 입력 초기화
 	n = int(input())
 	m = int(input())
 
@@ -31,7 +31,7 @@
 	print(arr)
 
 ### 2. 자료구조
-#### 수자료형
+#### (1). 수자료형
 ##### 나누기(실수형으로 처리)
 	print(a / b)
 
@@ -48,7 +48,7 @@
 	print(a ** 0.5)
 
 
-#### 리스트
+#### (2). 리스트
 
 ##### 크기가 N이고 모든 값이 0인 1차원 리스트 초기화
 	n = 10
@@ -115,7 +115,7 @@
 	array = [i for i in range(20) if i % 2 == 1]
 
 
-#### MAP
+#### (3). MAP
 
 ##### Key, Value 쌍 얻기(items)
 	dic = dict()
@@ -146,7 +146,7 @@
 	d = {e:[] for e in set(genres)}
 	d[e[0]].append([e[1] , e[2]])
 
-#### 집합자료형
+#### (4). 집합자료형
 ##### 중복없음, 순서없음
 	s1 = set([1,2,3,4,5,6])
 	s2 = set([4,5,6,7,8,9])
@@ -160,7 +160,7 @@
 	print(s3)   #result : {8, 9, 7}
 
 
-#### 스택
+#### (5). 스택
 
 ##### (DFS -> 재귀함수)
 	stack = []
@@ -170,7 +170,7 @@
 	stack[-1] #top위치에 있는 데이터를 단순 확인
 
 
-#### 큐
+#### (6). 큐
 
 ##### (BFS) 주로 deque로 사용
 	from collections import deque
@@ -180,7 +180,7 @@
 	d.popleft() #왼쪽 데이터 지우기
 	d.pop() #오른쪽 데이터 지우기
 
-#### 우선순위큐
+#### (7). 우선순위큐
 
 ##### heap사용 (리스트에서 최소원소 추출하는 자료구조), 그리디 알고리즘에서 주로사용
 	import heapq
@@ -199,21 +199,21 @@
 ### 3. 알고리즘
 
 
-#### 정렬알고리즘
+#### (1). 정렬알고리즘
 	a = []
 	a.reverse() 
 
-#### 기본값 오름차순 정렬
+##### 기본값 오름차순 정렬
 	a = [1, 10, 5, 7, 6]
 	a.sort(reverse=True)
 
-#### 새로운 그릇에 담고 정렬
+##### 새로운 그릇에 담고 정렬
 	x = [1 ,11, 2, 3]
 	y = sorted(x)
 	print(y)
 
 
-#### DFS, BFS
+#### (2). DFS, BFS
 	from collections import deque
 	
 	N, M, Start = map(int, input().split())
@@ -251,7 +251,7 @@
 	BFS(Start)
 
 
-#### 이진탐색
+#### (3). 이진탐색
 	N = int(input())
 	A = list(map(int, input().split()))
 	A.sort()
@@ -279,7 +279,7 @@
 	        print(0)
 
 
-#### 파이썬이진탐색 함수 (정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 왼쪽/오른쪽 인덱스를 찾는 메서드)
+#### (4). 파이썬이진탐색 함수 (정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 왼쪽/오른쪽 인덱스를 찾는 메서드)
 	from bisect import bisect_left, bisect_right
 	
 	a = [1,2,4,4,6]
@@ -289,7 +289,7 @@
 	print(bisect_right(a,x))
 
 
-#### 그리디 (그리디 최소값을 만드는 괄호 배치 찾기)
+#### (5). 그리디 (그리디 최소값을 만드는 괄호 배치 찾기)
 	answer = 0
 	A = list(map(str, input().split("-")))
 	
@@ -309,7 +309,7 @@
 	print(answer)
  
 
-#### 소수판별
+#### (6). 소수판별
 	import math
 	M, N = map(int, input().split())
 	A = [0] * (N + 1)
@@ -325,13 +325,13 @@
 	        print(A[i])
 	    
 
-#### 순열
+#### (7). 순열
 	from itertools import permutations
 	for i in permutations([1,2,3,4], 2):
 	    print(i, end=" ")
 
 
-#### 조합
+#### (8). 조합
 	from itertools import combinations
 	for i in combinations([1,2,3,4], 2):
 	    print(i, end=" ")
