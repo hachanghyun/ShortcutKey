@@ -2,22 +2,21 @@
 ### 자료구조, 정렬, 탐색, 그리디, 정수론, 그래프, 트리, 조합, 동적계획법
 
 #### 구분자가 줄바꿈일 경우
-    n = int(input())
+	n = int(input())
+	data = []
+	for i in range(n) :
+	  data.append(int(input()))
+	
+	data.sort(reverse = True)
+	print(data)
 
-data = []
-for i in range(n) :
-  data.append(int(input()))
-
-data.sort(reverse = True)
-print(data)
-
-# 구분자가 띄어쓰기일 경우
-m = int(input())
-
-data = list(map(int, input().split()))
-data.sort(reverse = True)
-
-print(data)
+#### 구분자가 띄어쓰기일 경우
+	m = int(input())
+	
+	data = list(map(int, input().split()))
+	data.sort(reverse = True)
+	
+	print(data)
 
 # 공백을 기준으로 구분하여 적은 수의 데이터 입력
 n, m, k = map(int, input().split())
