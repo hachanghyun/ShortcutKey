@@ -59,5 +59,6 @@ if sum > M
 
 M보다 커질때까지 반복문 
 M보다 커지면 종료 
+
 answer = nList 중 max값
 '''
