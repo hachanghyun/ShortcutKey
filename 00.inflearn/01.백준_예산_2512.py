@@ -1,64 +1,29 @@
-'''
-백준 입력값 default 세팅
-'''
-N = int(input())
-nList = list(map(int,input().split()))
-M = int(input())
-#a, b = map(int,input().split())
-#print(N, M , nList)
+n = int(input())
+requests = list(map(int,input().split()))
+budget = int(input())
 
-'''
-구현
-'''
-answer = 0
-sum = 0
-maxData = 0
-tmpData = 0
-startData = M // N 
-#print("startData = ", startData)
+def calculate_needed_budget(upper_bound):
+    needed_budget = 0
+    for request in requests:
+        needed_budget += min(request, upper_bound)
+    return needed_budget
 
-while True:
-    for i in nList:
-        if startData > i:
-            sum += i
-            if i > maxData:
-                maxData = i
-        else:
-            sum += startData
-            if startData > maxData:
-                maxData = startData
+low = 0
+high = max(requests)
+good_upper_bound = -1
 
-    #print("sum = ", sum)
-    tmpData = max(nList)
-    if startData > tmpData:
-        break;
+while low <= high:
+    mid = (low + high) // 2
 
-    if sum >= M:
-        #print("상한액 초과")
-        break;
+    if calculate_needed_budget(mid) <= budget:
+        good_upper_bound = mid
+        low = mid + 1
     else:
-        startData += 1
-        sum = 0
-        answer = maxData
-        maxData = 0
-
-#print("예상최대값")
+        high = mid -1
+    
+answer = -1
+for request in requests:
+    given = min(request, good_upper_bound)
+    answer = max(answer, given)
+    
 print(answer)
-
-'''
-수도 코드 
-상한액 startData = M // N 
-반복문
-if startData < nList[i]
-    sum += nList[i]
-else 
-    sum += startData
-
-if sum > M 
-    전에 sum 호출
-
-M보다 커질때까지 반복문 
-M보다 커지면 종료 
-
-answer = nList 중 max값
-'''
