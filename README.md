@@ -331,7 +331,7 @@
 	    print(i, end=" ")
 
 
-#### (8). 조합
+#### (8). 조합 
 	from itertools import combinations
 	for i in combinations([1,2,3,4], 2):
 	    print(i, end=" ")
