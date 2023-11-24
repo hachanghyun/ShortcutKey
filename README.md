@@ -15,7 +15,7 @@
 	data.sort(reverse = True)
 	print(data)
 
-#### (3). 공백을 기준으로 구분하여 적은 수의 데이터 입력
+#### (3). 공백을 기준으로 구분하여 적은 수의 데이터 입력 
 	n, m, k = map(int, input().split())
 	print(n,m,k)
 
