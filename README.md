@@ -21,7 +21,7 @@
 
 #### (4). 이차원 배열 입력 초기화
 	n = int(input())
-	m = int(input())
+	m = int(input()) 
 
 	arr = []
 	for i in range(n):
