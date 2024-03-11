@@ -5,7 +5,7 @@
 	for i in range(n) :
 	  data.append(int(input())) 
 	 
-	data.sort(reverse = True)  
+	data.sort(reverse = True)   
 	print(data)
 
 #### (2). 구분자가 띄어쓰기일 경우
