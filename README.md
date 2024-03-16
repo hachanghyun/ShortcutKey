@@ -13,7 +13,7 @@
 	
 	data = list(map(int, input().split()))
 	data.sort(reverse = True)
-	print(data)
+	print(data) 
 
 #### (3). 공백을 기준으로 구분하여 적은 수의 데이터 입력 
 	n, m, k = map(int, input().split())
